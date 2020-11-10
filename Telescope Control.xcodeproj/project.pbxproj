@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3516913D255985E0001629F3 /* Telescope_ControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516913C255985E0001629F3 /* Telescope_ControlApp.swift */; };
-		3516913F255985E0001629F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516913E255985E0001629F3 /* ContentView.swift */; };
+		3516913F255985E0001629F3 /* ControllerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516913E255985E0001629F3 /* ControllerListView.swift */; };
 		35169141255985E1001629F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35169140255985E1001629F3 /* Assets.xcassets */; };
 		35169144255985E1001629F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35169143255985E1001629F3 /* Preview Assets.xcassets */; };
+		3516914E25598781001629F3 /* TelescopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516914D25598781001629F3 /* TelescopeController.swift */; };
+		353DF8BD25598868001A046C /* TelescopeControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF8BC25598868001A046C /* TelescopeControllerManager.swift */; };
+		353DF8C025599D7A001A046C /* ControllerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF8BF25599D7A001A046C /* ControllerDetailView.swift */; };
+		353DF8C72559B080001A046C /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF8C62559B080001A046C /* BLECentralViewController.swift */; };
+		353DF8CB2559B160001A046C /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DF8CA2559B160001A046C /* BLEManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35169139255985E0001629F3 /* Telescope Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telescope Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3516913C255985E0001629F3 /* Telescope_ControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telescope_ControlApp.swift; sourceTree = "<group>"; };
-		3516913E255985E0001629F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3516913E255985E0001629F3 /* ControllerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerListView.swift; sourceTree = "<group>"; };
 		35169140255985E1001629F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35169143255985E1001629F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35169145255985E1001629F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3516914D25598781001629F3 /* TelescopeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelescopeController.swift; sourceTree = "<group>"; };
+		353DF8BC25598868001A046C /* TelescopeControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelescopeControllerManager.swift; sourceTree = "<group>"; };
+		353DF8BF25599D7A001A046C /* ControllerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerDetailView.swift; sourceTree = "<group>"; };
+		353DF8C62559B080001A046C /* BLECentralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECentralViewController.swift; sourceTree = "<group>"; };
+		353DF8CA2559B160001A046C /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,10 @@
 		3516913B255985E0001629F3 /* Telescope Control */ = {
 			isa = PBXGroup;
 			children = (
+				353DF8C22559AF46001A046C /* Bluetooth */,
+				3516915125598793001629F3 /* Views */,
+				3516915025598787001629F3 /* Models */,
 				3516913C255985E0001629F3 /* Telescope_ControlApp.swift */,
-				3516913E255985E0001629F3 /* ContentView.swift */,
 				35169140255985E1001629F3 /* Assets.xcassets */,
 				35169145255985E1001629F3 /* Info.plist */,
 				35169142255985E1001629F3 /* Preview Content */,
@@ -67,6 +79,33 @@
 				35169143255985E1001629F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3516915025598787001629F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3516914D25598781001629F3 /* TelescopeController.swift */,
+				353DF8BC25598868001A046C /* TelescopeControllerManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3516915125598793001629F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3516913E255985E0001629F3 /* ControllerListView.swift */,
+				353DF8BF25599D7A001A046C /* ControllerDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		353DF8C22559AF46001A046C /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				353DF8C62559B080001A046C /* BLECentralViewController.swift */,
+				353DF8CA2559B160001A046C /* BLEManager.swift */,
+			);
+			path = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3516913F255985E0001629F3 /* ContentView.swift in Sources */,
+				353DF8C72559B080001A046C /* BLECentralViewController.swift in Sources */,
+				353DF8BD25598868001A046C /* TelescopeControllerManager.swift in Sources */,
+				353DF8CB2559B160001A046C /* BLEManager.swift in Sources */,
+				3516914E25598781001629F3 /* TelescopeController.swift in Sources */,
+				3516913F255985E0001629F3 /* ControllerListView.swift in Sources */,
+				353DF8C025599D7A001A046C /* ControllerDetailView.swift in Sources */,
 				3516913D255985E0001629F3 /* Telescope_ControlApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

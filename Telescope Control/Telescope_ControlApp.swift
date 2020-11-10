@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct Telescope_ControlApp: App {
+    
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ControllerListView()
+                .environmentObject(TelescopeControllerManager())
+                .environmentObject(BLEManager())
         }
+    }
+}
+
+struct Telescope_ControlApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ControllerListView()
+            .environmentObject(TelescopeControllerManager())
+            .colorScheme(.dark)
     }
 }
